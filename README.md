@@ -1,5 +1,5 @@
 
-# Overtime app
+# Overtime App
 
 ## Key requirement: company needs documentation that salaried employees did not get overtime each week
 
