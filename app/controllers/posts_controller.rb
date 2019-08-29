@@ -1,6 +1,7 @@
-class PostsController < ApplicationController 
+class PostsController < ApplicationController
   before_action :set_post, only: [:show]
   def index
+    @post = Post.all
   end
 
   def new
@@ -9,6 +10,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post = current_user.id
 
     if @post.save
       redirect_to @post, notice: "Your post was created successfully"
